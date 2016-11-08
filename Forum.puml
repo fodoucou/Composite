@@ -1,0 +1,32 @@
+@startuml
+
+
+
+fr.miage.Composant <|-- fr.miage.Message
+
+fr.miage.Composant <|-- fr.miage.Salon
+
+fr.miage.Forum <|-- fr.miage.Composant
+
+fr.miage.Composant <|-- Theme
+
+fr.miage.Composant <--* fr.miage.Forum
+
+fr.miage.Composant <--* fr.miage.Salon
+
+class fr.miage.Composant {
+
+sujet : String
++add()
++remove(int i)
++size()
+
+}
+
+
+class fr.miage.Message{
+
+contenu : String
+
+}
+@enduml
